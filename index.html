@@ -3,118 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You're My Sunshine ☀️</title>
+    <title>Smile for Me 😊</title>
     <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ffb3d9, #ffccff);
-            overflow: hidden;
+            background-color: #ffe6e6;
         }
         .container {
             margin-top: 50px;
         }
         .heart {
-            color: #ff66b2;
-            font-size: 60px;
+            color: red;
+            font-size: 50px;
             animation: heartbeat 1s infinite;
         }
         @keyframes heartbeat {
             0% { transform: scale(1); }
-            50% { transform: scale(1.5); }
+            50% { transform: scale(1.3); }
             100% { transform: scale(1); }
         }
         .button {
-            background-color: #ff99cc;
+            background-color: pink;
             border: none;
-            padding: 20px 40px;
-            font-size: 22px;
+            padding: 15px;
+            font-size: 20px;
             cursor: pointer;
-            border-radius: 25px;
-            margin-top: 20px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        .button:hover {
-            background-color: #ff66b2;
-            transform: scale(1.1);
+            border-radius: 10px;
         }
         .message {
-            font-size: 26px;
+            font-size: 24px;
             color: #d63384;
-            margin-top: 30px;
-        }
-        .gif-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-        }
-        .gif-container img {
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
-        .confetti {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hi Sweetheart! 💕</h1>
+        <h1>Hey Beautiful Setu Baby! 💖</h1>
         <p class="heart">❤️</p>
         <button class="button" onclick="showMessage()">Press for a Surprise 🎁</button>
         <p class="message" id="message"></p>
-        <div class="gif-container" id="gifContainer"></div>
-        <div class="confetti" id="confettiContainer"></div>
     </div>
-    <audio id="backgroundMusic" autoplay loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
-    </audio>
+    
     <script>
         function showMessage() {
             const messages = [
-                "You make my world brighter every day! 🌞",
-                "You are the most precious gift in my life! 🎁",
-                "I can't imagine my life without you! 🥰",
-                "You make everything better with your smile! 😄",
-                "You're the reason I believe in love! ❤️"
+                "I love You Setu Baby....You are the most amazing person ever! 💕",
+                "Your smile makes the world brighter! ☀️",
+                "I am so lucky to have you! 🥰",
+                "You're my favorite person in the universe! 🌎💖",
+                "No matter what, I'm always here for you! 🤗"
             ];
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
             document.getElementById("message").innerText = randomMessage;
-
-            showGif();
-            showConfetti();
-        }
-
-        function showGif() {
-            const gifs = [
-                "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
-                "https://media.giphy.com/media/3o6ozC3Yf2QkRBGNqI/giphy.gif",
-                "https://media.giphy.com/media/3o7aD2sa01FX8sSntm/giphy.gif",
-                "https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif"
-            ];
-            const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
-            const gifContainer = document.getElementById("gifContainer");
-            gifContainer.innerHTML = `<img src="${randomGif}" alt="Random Cute Gif">`;
-        }
-
-        function showConfetti() {
-            const confetti = document.getElementById("confettiContainer");
-            // Using a simpler confetti animation directly from a CDN
-            confetti.innerHTML = "<script src='https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js'></script>";
-            confetti.style.display = "block";
-            setTimeout(() => {
-                confetti.style.display = "none";
-            }, 5000);
         }
     </script>
 </body>
